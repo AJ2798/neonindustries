@@ -22,22 +22,11 @@ const siteConfig = {
     primaryButton: { label: "Explore our divisions", href: "#divisions" },
     secondaryButton: { label: "See what we're building", href: "#projects" },
     note: "Built for scalable impact across industries.",
-    systemCard: {
-      title: "A platform for ambitious systems.",
-      subtitle: "Designing products that connect physical infrastructure with intelligent software.",
-      metrics: [
-        { label: "Technology domains", value: "08+", signal: "cyan" },
-        { label: "Core philosophy", value: "Build", signal: "violet" },
-        { label: "Operating model", value: "Multi-industry" },
-        { label: "Direction", value: "Future" },
-      ],
-    },
   },
 
   divisionsSection: {
     kicker: "Neon ecosystem",
     title: "One company. Multiple frontiers.",
-    intro: "Neon Industries develops focused products, platforms and engineering programs across multiple industries, all connected under one parent company.",
   },
 
   divisions: [

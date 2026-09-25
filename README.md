@@ -57,3 +57,16 @@ package.json             Node scripts and dependencies
 ```text
 info@neonindustriesltd.com
 ```
+
+
+## Latest UI Update
+
+The hero dashboard/system card has been removed and replaced with a lighter decorative background treatment.
+
+The descriptive paragraph beside the **One company. Multiple frontiers.** heading has also been removed.
+
+All editable site content remains in:
+
+```text
+src/data/siteConfig.js
+```
