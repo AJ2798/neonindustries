@@ -1,0 +1,2 @@
+import siteConfig from "../data/siteConfig";
+export default function Footer(){return <footer><div className="container footer-grid"><div>© {new Date().getFullYear()} {siteConfig.company.name}. All rights reserved.</div><div className="footer-links">{siteConfig.navigation.filter(i=>i.href!=="#contact").map(i=><a key={i.href} href={i.href}>{i.label}</a>)}<a href="#top">Back to top ↑</a></div></div></footer>}

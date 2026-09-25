@@ -1,0 +1,2 @@
+import siteConfig from "../data/siteConfig";
+export default function Contact(){const {contact}=siteConfig;return <section id="contact"><div className="container"><div className="cta-panel reveal visible"><div><div className="kicker">{contact.kicker}</div><h3>{contact.title}</h3></div><a className="btn btn-primary" href={`mailto:${contact.email}`}>{contact.buttonLabel} <span>→</span></a></div></div></section>}
