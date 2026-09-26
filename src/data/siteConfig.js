@@ -30,14 +30,65 @@ const siteConfig = {
   },
 
   divisions: [
-    { tag: "AI / Software", icon: "✦", name: "Neon Intelligence", description: "Artificial intelligence, software platforms, automation systems, digital infrastructure and intelligent products.", large: true },
-    { tag: "Security", icon: "⬡", name: "NI Sentinel", description: "Security systems, monitoring platforms, public-safety technology and mission-critical digital infrastructure.", large: true },
-    { tag: "Education", icon: "▦", name: "SchoolOS", description: "Integrated school operations software for academics, finance, staff management, enrollment and administration." },
-    { tag: "Logistics", icon: "⇄", name: "LogisticsOS", description: "Digital operations infrastructure for logistics, fleet workflows, movement tracking, planning and business coordination." },
-    { tag: "Energy / Power Systems", icon: "⚡", name: "Energy Infrastructure", description: "End-to-end energy and power infrastructure development — from consultancy, power-system studies and engineering design to renewable integration, grid analysis, monitoring, technical software and implementation support.", large: true },
-    { tag: "Business Technology", icon: "▤", name: "NI Business", description: "Business software, operational systems and digital tools designed to improve management, workflows and organizational efficiency." },
-    { tag: "Agriculture / Food Security", icon: "⌘", name: "NI AGT", description: "NI AGT combines commercial farming, food production and agritech, developing and operating agricultural ventures while using technology to improve productivity, monitoring, automation, resource efficiency and long-term food security." },
-    { tag: "Space / Future", icon: "◉", name: "Orbital NI", description: "Long-term research and development in space systems, orbital technologies and next-generation engineering." },
+    {
+      tag: "AI / Software",
+      icon: "✦",
+      name: "Neon Intelligence",
+      description:
+        "Artificial intelligence, software platforms, automation systems, digital infrastructure and intelligent products.",
+      large: true,
+    },
+    {
+      tag: "Security",
+      icon: "⬡",
+      name: "NI Sentinel",
+      description:
+        "Security systems, monitoring platforms, public-safety technology and mission-critical digital infrastructure.",
+      large: true,
+    },
+    {
+      tag: "Education",
+      icon: "▦",
+      name: "SchoolOS",
+      description:
+        "Integrated school operations software for academics, finance, staff management, enrollment and administration.",
+    },
+    {
+      tag: "Logistics",
+      icon: "⇄",
+      name: "LogisticsOS",
+      description:
+        "Digital operations infrastructure for logistics, fleet workflows, movement tracking, planning and business coordination.",
+    },
+    {
+      tag: "Business Technology",
+      icon: "▤",
+      name: "NI Business",
+      description:
+        "Business and enterprise platforms for HR management, payroll, procurement, finance, invoicing, inventory, asset management, staff administration, approvals, reporting and other operational workflows that help organizations manage day-to-day activities more efficiently.",
+    },
+    {
+      tag: "Agriculture / Food Security",
+      icon: "⌘",
+      name: "NI AGT",
+      description:
+        "NI AGT combines commercial farming, food production and agritech, developing and operating agricultural ventures while using technology to improve productivity, monitoring, automation, resource efficiency and long-term food security.",
+    },
+    {
+      tag: "Energy / Power Systems",
+      icon: "⚡",
+      name: "Energy Infrastructure",
+      description:
+        "Power-system consultancy, studies and engineering design — including renewable integration, grid analysis, monitoring, technical software and implementation support.",
+      large: true,
+    },
+    {
+      tag: "Space / Future",
+      icon: "◉",
+      name: "Orbital NI",
+      description:
+        "Long-term research and development in space systems, orbital technologies and next-generation engineering.",
+    },
   ],
 
   projectsSection: {
