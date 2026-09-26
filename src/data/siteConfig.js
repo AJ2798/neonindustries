@@ -47,6 +47,13 @@ const siteConfig = {
       large: true,
     },
     {
+      tag: "Business Technology",
+      icon: "▤",
+      name: "NI Business",
+      description:
+        "Business and enterprise platforms for HR management, payroll, procurement, finance, invoicing, inventory, asset management, staff administration, approvals, reporting and other operational workflows that help organizations manage day-to-day activities more efficiently.",
+    },
+    {
       tag: "Education",
       icon: "▦",
       name: "SchoolOS",
@@ -59,13 +66,6 @@ const siteConfig = {
       name: "LogisticsOS",
       description:
         "Digital operations infrastructure for logistics, fleet workflows, movement tracking, planning and business coordination.",
-    },
-    {
-      tag: "Business Technology",
-      icon: "▤",
-      name: "NI Business",
-      description:
-        "Business and enterprise platforms for HR management, payroll, procurement, finance, invoicing, inventory, asset management, staff administration, approvals, reporting and other operational workflows that help organizations manage day-to-day activities more efficiently.",
     },
     {
       tag: "Agriculture / Food Security",
