@@ -59,14 +59,15 @@ info@neonindustriesltd.com
 ```
 
 
-## Latest UI Update
+## Product demos
 
-The hero dashboard/system card has been removed and replaced with a lighter decorative background treatment.
-
-The descriptive paragraph beside the **One company. Multiple frontiers.** heading has also been removed.
-
-All editable site content remains in:
+The SchoolOS and Neon Intelligence sections embed interactive replicas of each product's UI, running on synthetic data only:
 
 ```text
-src/data/siteConfig.js
+src/components/demos/SchoolOSDashboard.jsx   SchoolOS shell + Overview, Students, Fees, Payroll, Attendance
+src/components/demos/schoolos.css            Ported from schoolos/front-end-app tokens, shell and dashboard styles
+src/components/demos/NeonWorkspace.jsx       Neon Intelligence workspace with scripted conversations and an approval flow
+src/components/demos/neon-workspace.css      Ported from neon-intelligence/frontend tokens
 ```
+
+Both demos use CSS container queries, so they adapt to the width of their frame rather than the viewport.

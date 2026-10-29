@@ -8,120 +8,143 @@ const siteConfig = {
   },
 
   navigation: [
+    { label: "Products", href: "#products" },
+    { label: "SchoolOS", href: "#schoolos" },
+    { label: "Neon Intelligence", href: "#intelligence" },
     { label: "Divisions", href: "#divisions" },
-    { label: "Projects", href: "#projects" },
-    { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
   ],
 
   hero: {
-    eyebrow: "Building what comes next",
-    titleLine1: "Technology.",
-    titleLine2: "Engineered forward.",
-    copy: "Neon Industries is a multi-industry technology company building products, platforms and engineering systems across software, AI, business, logistics, energy, security and future technologies.",
-    primaryButton: { label: "Explore our divisions", href: "#divisions" },
-    secondaryButton: { label: "See what we're building", href: "#projects" },
-    note: "Built for scalable impact across industries.",
+    eyebrow: "Neon Industries Limited",
+    titleLine1: "Software that runs",
+    titleLine2: "real institutions.",
+    copy: "We build operating systems for schools and businesses, and an AI workspace that can act on them safely. Then we take the same engineering into energy, security, logistics and agriculture.",
+    primaryButton: { label: "See SchoolOS live", href: "#schoolos" },
+    secondaryButton: { label: "Try Neon Intelligence", href: "#intelligence" },
+  },
+
+  heroProof: [
+    { value: "30+", label: "SchoolOS screens across people, academics, finance and payroll" },
+    { value: "2", label: "Flagship platforms, one integration layer" },
+    { value: "8", label: "Divisions on the roadmap" },
+  ],
+
+  productsSection: {
+    kicker: "Flagship platforms",
+    title: "Two products. One connected stack.",
+    intro: "SchoolOS is the system of record. Neon Intelligence is the assistant that reads it, prepares the work and waits for your approval before anything changes.",
+  },
+
+  products: [
+    {
+      id: "schoolos",
+      name: "SchoolOS",
+      tag: "Education operations",
+      summary: "Students, academics, fees, payroll, procurement and approvals for single schools and multi-campus groups.",
+      href: "#schoolos",
+    },
+    {
+      id: "intelligence",
+      name: "Neon Intelligence",
+      tag: "AI workspace",
+      summary: "Ask in plain language. It queries your connected systems, drafts the change, and shows exactly what will be written.",
+      href: "#intelligence",
+    },
+  ],
+
+  schoolos: {
+    kicker: "SchoolOS",
+    title: "The whole school, on one dashboard.",
+    copy: "Every role sees the numbers it is allowed to see: enrolment, attendance, collections, payroll and spending, with approvals routed by policy and every action written to the audit log.",
+    features: [
+      { title: "Academics", text: "Classes, timetables, attendance, flexible assessment weighting and promotions." },
+      { title: "Finance", text: "Fee structures, invoices, payments with proof, refunds and financial account ledgers." },
+      { title: "Procurement", text: "Purchase requests to RFQs, quotations, orders, goods receipts and inventory." },
+      { title: "Payroll", text: "Salary profiles, payroll runs, payslips and approval ownership." },
+      { title: "Control", text: "Roles and permissions, approval policies, MFA and a full audit log." },
+      { title: "Multi-campus", text: "Departments, subjects and timetables scoped to each campus." },
+    ],
+  },
+
+  intelligence: {
+    kicker: "Neon Intelligence",
+    title: "An assistant that asks before it acts.",
+    copy: "Neon Intelligence connects to SchoolOS and NI Business. It answers with live figures, prepares payments, payroll and reminders as reviewable proposals, and only commits after a fresh approval code.",
+    points: [
+      { title: "Grounded answers", text: "Figures come from the connected system, with the query shown." },
+      { title: "Proposals, not surprises", text: "Every change is a snapshot with a before-and-after diff." },
+      { title: "Approval-gated", text: "Nothing is posted, sent or submitted until a person approves it." },
+    ],
   },
 
   divisionsSection: {
     kicker: "Neon ecosystem",
     title: "One company. Multiple frontiers.",
+    intro: "The platforms come first. The same engineering discipline extends into the industries below.",
   },
 
   divisions: [
     {
       tag: "AI / Software",
-      icon: "✦",
       name: "Neon Intelligence",
-      description:
-        "Artificial intelligence, software platforms, automation systems, digital infrastructure and intelligent products.",
-      large: true,
-    },
-    {
-      tag: "Security",
-      icon: "⬡",
-      name: "NI Sentinel",
-      description:
-        "Security systems, monitoring platforms, public-safety technology and mission-critical digital infrastructure.",
-      large: true,
-    },
-    {
-      tag: "Business Technology",
-      icon: "▤",
-      name: "NI Business",
-      description:
-        "Business and enterprise platforms for HR management, payroll, procurement, finance, invoicing, inventory, asset management, staff administration, approvals, reporting and other operational workflows that help organizations manage day-to-day activities more efficiently.",
+      status: "Building",
+      description: "AI, software platforms, automation and the assistant layer that connects every Neon product.",
     },
     {
       tag: "Education",
-      icon: "▦",
       name: "SchoolOS",
-      description:
-        "Integrated school operations software for academics, finance, staff management, enrollment and administration.",
+      status: "Building",
+      description: "Integrated school operations for academics, finance, staff, enrolment and administration.",
+    },
+    {
+      tag: "Business Technology",
+      name: "NI Business",
+      status: "Building",
+      description: "HR, payroll, procurement, invoicing, inventory, assets, approvals and reporting for organisations of any size.",
+    },
+    {
+      tag: "Security",
+      name: "NI Sentinel",
+      status: "R&D",
+      description: "Security systems, monitoring platforms, vision and public-safety technology.",
     },
     {
       tag: "Logistics",
-      icon: "⇄",
       name: "LogisticsOS",
-      description:
-        "Digital operations infrastructure for logistics, fleet workflows, movement tracking, planning and business coordination.",
+      status: "Planned",
+      description: "Fleet workflows, movement tracking, planning and coordination for logistics operators.",
     },
     {
-      tag: "Agriculture / Food Security",
-      icon: "⌘",
+      tag: "Agriculture",
       name: "NI AGT",
-      description:
-        "NI AGT combines commercial farming, food production and agritech, developing and operating agricultural ventures while using technology to improve productivity, monitoring, automation, resource efficiency and long-term food security.",
+      status: "Planned",
+      description: "Commercial farming and agritech: monitoring, automation and resource efficiency for long-term food security.",
     },
     {
-      tag: "Energy / Power Systems",
-      icon: "⚡",
+      tag: "Energy",
       name: "Energy Infrastructure",
-      description:
-        "Power-system consultancy, studies and engineering design — including renewable integration, grid analysis, monitoring, technical software and implementation support.",
-      large: true,
+      status: "Consulting",
+      description: "Power-system studies and engineering design, renewable integration, grid analysis and technical software.",
     },
     {
       tag: "Space / Future",
-      icon: "◉",
       name: "Orbital NI",
-      description:
-        "Long-term research and development in space systems, orbital technologies and next-generation engineering.",
+      status: "Long-term",
+      description: "Research into space systems, orbital technologies and next-generation engineering.",
     },
-  ],
-
-  projectsSection: {
-    kicker: "Featured system",
-    title: "From idea to working infrastructure.",
-    intro: "We focus on systems that solve operational problems, become dependable infrastructure, and scale into larger platforms.",
-  },
-
-  featuredProject: {
-    pill: "Live product development",
-    title: "SchoolOS",
-    description: "A connected school management platform built to centralize academics, enrollment, finance, staff workflows, reporting, procurement and daily school operations.",
-    points: ["Multi-campus", "Finance", "Academics", "Staff", "Analytics"],
-  },
-
-  stats: [
-    { value: 8, suffix: "+", label: "Products & technology areas" },
-    { value: 1, suffix: "+", label: "Core company vision" },
-    { value: 100, suffix: "", label: "% product-first mindset" },
-    { value: "∞", suffix: "", label: "Room to expand" },
   ],
 
   vision: {
     kicker: "Our direction",
     title: "Build the company that builds the future.",
-    copy: "Neon Industries is designed around a simple principle: create useful technology, develop deep engineering capability, and expand into industries where intelligent systems can make a meaningful difference.",
-    buttonLabel: "Connect with Neon Industries",
-    buttonHref: "#contact",
+    copy: "Create useful technology, develop deep engineering capability, and expand into industries where intelligent systems make a measurable difference.",
   },
 
   contact: {
     kicker: "Work with us",
-    title: "Ideas become products when engineering meets execution.",
+    title: "Run your school or business on Neon.",
+    copy: "Book a walkthrough of SchoolOS, pilot Neon Intelligence with your team, or talk to us about an engineering project.",
     buttonLabel: "Start a conversation",
     email: "info@neonindustriesltd.com",
   },

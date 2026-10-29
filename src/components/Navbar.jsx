@@ -8,13 +8,13 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <div className="nav-wrap">
-      <nav className={scrolled ? "scrolled" : ""}>
+      <nav className={scrolled || open ? "scrolled" : ""}>
         <a href="#top" className="brand" aria-label="Neon Industries home" onClick={() => setOpen(false)}>
           <span className="brand-mark">NI</span>
           <span>{siteConfig.company.name}</span>
@@ -24,8 +24,10 @@ export default function Navbar() {
             <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
           ))}
         </div>
-        <a className="nav-cta" href="#contact">Explore Neon <span>↗</span></a>
-        <button className="menu-btn" onClick={() => setOpen(!open)} aria-label="Open navigation">{open ? "✕" : "☰"}</button>
+        <a className="nav-cta" href="#contact">Book a demo</a>
+        <button className="menu-btn" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>
+          {open ? "✕" : "☰"}
+        </button>
       </nav>
     </div>
   );

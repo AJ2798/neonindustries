@@ -1,2 +1,14 @@
 import siteConfig from "../data/siteConfig";
-export default function Vision(){const {vision}=siteConfig;return <section className="vision" id="vision"><div className="container vision-wrap reveal visible"><div className="kicker">{vision.kicker}</div><h2>{vision.title}</h2><p>{vision.copy}</p><a className="btn btn-secondary" href={vision.buttonHref}>{vision.buttonLabel} <span>↗</span></a></div></section>}
+
+export default function Vision() {
+  const { vision } = siteConfig;
+  return (
+    <section className="vision" id="vision">
+      <div className="container vision-wrap">
+        <div className="kicker">{vision.kicker}</div>
+        <h2>{vision.title}</h2>
+        <p>{vision.copy}</p>
+      </div>
+    </section>
+  );
+}
