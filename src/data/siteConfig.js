@@ -9,8 +9,6 @@ const siteConfig = {
 
   navigation: [
     { label: "Products", href: "#products" },
-    { label: "SchoolOS", href: "#schoolos" },
-    { label: "Neon Intelligence", href: "#intelligence" },
     { label: "Divisions", href: "#divisions" },
     { label: "Contact", href: "#contact" },
   ],
@@ -144,8 +142,8 @@ const siteConfig = {
   contact: {
     kicker: "Work with us",
     title: "Run your school or business on Neon.",
-    copy: "Book a walkthrough of SchoolOS, pilot Neon Intelligence with your team, or talk to us about an engineering project.",
-    buttonLabel: "Start a conversation",
+    copy: "Whether it's SchoolOS for your school, Neon Intelligence for your team, or an engineering project, we'd like to hear from you.",
+    buttonLabel: "Connect with us",
     email: "info@neonindustriesltd.com",
   },
 };

@@ -16,7 +16,6 @@ export default function Navbar() {
     <div className="nav-wrap">
       <nav className={scrolled || open ? "scrolled" : ""}>
         <a href="#top" className="brand" aria-label="Neon Industries home" onClick={() => setOpen(false)}>
-          <span className="brand-mark">NI</span>
           <span>{siteConfig.company.name}</span>
         </a>
         <div className={`nav-links ${open ? "open" : ""}`}>
@@ -24,7 +23,6 @@ export default function Navbar() {
             <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
           ))}
         </div>
-        <a className="nav-cta" href="#contact">Book a demo</a>
         <button className="menu-btn" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>
           {open ? "✕" : "☰"}
         </button>

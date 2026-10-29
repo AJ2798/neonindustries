@@ -10,6 +10,7 @@ export default function Footer() {
           <div>
             <strong>{company.fullName}</strong>
             <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>
+            <a className="footer-email" href={`mailto:${company.email}`}>{company.email}</a>
           </div>
         </div>
         <div className="footer-links">

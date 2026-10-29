@@ -438,7 +438,7 @@ function Placeholder({ item }) {
     <div className="sos-card sos-empty">
       <span className="sos-empty-icon"><Icon size={22} /></span>
       <span className="sos-empty-title">{item.label}</span>
-      This screen is part of the full SchoolOS build. Book a walkthrough to see it with your own data.
+      This screen is part of the full SchoolOS build. Connect with us to see it with your own data.
     </div>
   );
 }

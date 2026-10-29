@@ -11,10 +11,7 @@ export default function Contact() {
             <h2>{contact.title}</h2>
             <p>{contact.copy}</p>
           </div>
-          <div className="cta-actions">
-            <a className="btn btn-primary" href={`mailto:${contact.email}?subject=Neon%20Industries%20demo`}>{contact.buttonLabel} <span>→</span></a>
-            <a className="cta-email" href={`mailto:${contact.email}`}>{contact.email}</a>
-          </div>
+          <a className="btn btn-primary" href={`mailto:${contact.email}?subject=Connecting%20with%20Neon%20Industries`}>{contact.buttonLabel} <span>→</span></a>
         </div>
       </div>
     </section>
