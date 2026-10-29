@@ -18,7 +18,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; background: var(--bg); }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; background: var(--bg); color-scheme: dark; scrollbar-width: thin; scrollbar-color: #2a2a2a #000; }
 body {
   font-family: var(--sans);
   background: var(--bg);

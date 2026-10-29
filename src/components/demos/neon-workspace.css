@@ -86,6 +86,15 @@
 }
 
 .niw *, .niw *::before, .niw *::after { box-sizing: border-box; }
+
+/* Thin scrollbars that blend with the theme instead of the browser's default. */
+.niw { color-scheme: dark; }
+.niw[data-theme="light"] { color-scheme: light; }
+.niw * { scrollbar-width: thin; scrollbar-color: var(--ni-border-strong) transparent; }
+.niw ::-webkit-scrollbar { width: 6px; height: 6px; }
+.niw ::-webkit-scrollbar-track { background: transparent; }
+.niw ::-webkit-scrollbar-thumb { background: var(--ni-border-strong); border-radius: 99px; }
+.niw ::-webkit-scrollbar-button { display: none; }
 .niw :where(button, textarea) { font: inherit; color: inherit; }
 
 /* ── Sidebar ─────────────────────────────── */
@@ -372,6 +381,9 @@
 .niw-msg-ai { display: flex; flex-direction: column; gap: 12px; font-size: 14.5px; animation: niw-in 0.35s var(--ni-ease); }
 .niw-msg-ai p { margin: 0; }
 @keyframes niw-in { from { opacity: 0; transform: translateY(6px); } }
+.niw-msg-ai > * { animation: niw-in 0.35s var(--ni-ease); }
+.niw-caret { display: inline-block; width: 8px; height: 16px; background: var(--ni-text); animation: niw-blink 0.9s steps(1) infinite; }
+@keyframes niw-blink { 50% { opacity: 0; } }
 
 .niw-trace { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; color: var(--ni-text-subtle); }
 .niw-trace div { display: flex; align-items: center; gap: 8px; }
@@ -402,6 +414,20 @@
   cursor: pointer;
 }
 .niw-chips button:hover { background: var(--ni-surface-hover); }
+
+.niw-file { display: flex; align-items: center; gap: 6px; width: fit-content; margin-bottom: 6px; padding: 4px 10px; border: 1px solid var(--ni-border-strong); border-radius: 8px; background: var(--ni-surface); font-size: 12.5px; color: var(--ni-text-muted); }
+.niw-msg-user { display: flex; flex-direction: column; align-items: flex-end; }
+.niw-sev { font-size: 12px; font-weight: 500; }
+.niw-sev[data-tone="warning"] { color: var(--ni-warning); }
+.niw-sev[data-tone="danger"] { color: var(--ni-danger); }
+
+.niw-draft, .niw-doc { border: 1px solid var(--ni-border); border-radius: 12px; background: var(--ni-surface); overflow: hidden; }
+.niw-draft-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 14px; border-bottom: 1px solid var(--ni-border); font-size: 12.5px; color: var(--ni-text-muted); }
+.niw-draft-head b { color: var(--ni-text); font-weight: 600; margin-right: 6px; }
+.niw-draft-subject { padding: 10px 14px 0; font-weight: 600; font-size: 14px; }
+.niw-draft-body, .niw-doc { padding: 10px 14px 14px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: var(--ni-text); }
+.niw-doc { padding: 16px 18px; }
+.niw-doc-title { font-family: var(--ni-font-display); font-size: 17px; font-weight: 700; color: var(--ni-text-strong); margin-bottom: 4px; }
 
 .niw-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; color: var(--ni-text); }
 

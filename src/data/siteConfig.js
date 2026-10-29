@@ -206,7 +206,7 @@ const siteConfig = {
     cta: {
       title: "Let's build something meaningful.",
       text: "Whether you are an organization seeking digital transformation, an institution looking to modernize operations, or a potential partner interested in innovation, we welcome opportunities to collaborate.",
-      email: "aj@neonindustriesltd.com",
+      email: "info@neonindustriesltd.com",
     },
   },
 };

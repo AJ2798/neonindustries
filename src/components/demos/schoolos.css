@@ -86,6 +86,15 @@
 }
 
 .sos-demo *, .sos-demo *::before, .sos-demo *::after { box-sizing: border-box; }
+
+/* Thin scrollbars that blend with the theme instead of the browser's default. */
+.sos-demo { color-scheme: light; }
+.sos-demo[data-theme="dark"] { color-scheme: dark; }
+.sos-demo * { scrollbar-width: thin; scrollbar-color: var(--sos-border-strong) transparent; }
+.sos-demo ::-webkit-scrollbar { width: 6px; height: 6px; }
+.sos-demo ::-webkit-scrollbar-track { background: transparent; }
+.sos-demo ::-webkit-scrollbar-thumb { background: var(--sos-border-strong); border-radius: 99px; }
+.sos-demo ::-webkit-scrollbar-button { display: none; }
 .sos-demo button { font-family: inherit; }
 
 /* ═════════════ Sidebar ═════════════ */

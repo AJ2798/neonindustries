@@ -28,7 +28,8 @@ export default function Navbar({ path }) {
     <header className={`topbar ${scrolled || open ? "scrolled" : ""}`}>
       <div className="container topbar-inner">
         <a href="/" className="brand" aria-label="Neon Industries home" onClick={() => setOpen(false)}>
-          Neon Industries<span className="cursor" aria-hidden="true">_</span>
+          {/* Neon Industries<span className="cursor" aria-hidden="true">_</span> */}
+          Neon Industries
         </a>
 
         <nav className={`nav-links ${open ? "open" : ""}`} aria-label="Main">
