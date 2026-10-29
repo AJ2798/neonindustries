@@ -224,7 +224,8 @@ h2 { font-size: clamp(2.2rem, 4.8vw, 4rem); }
 .stat-grid dd { margin-top: 10px; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
 .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding: 16px 0; background: var(--surface); }
-.marquee-track { display: flex; width: max-content; animation: marquee 45s linear infinite; }
+.marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-track span {
   display: inline-flex;
   align-items: center;
@@ -534,4 +535,6 @@ main > .about-card-wrap { border-top: 0; padding: 0 0 120px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  /* The sector strip is slow and decorative, so it keeps moving, just more gently. */
+  .marquee-track { animation: marquee 60s linear infinite !important; }
 }
