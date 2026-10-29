@@ -8,14 +8,11 @@ export default function About() {
   return (
     <>
       <section className="page-hero" id="top">
-        <div className="hero-backdrop" aria-hidden="true">
-          <div className="hero-orbit" />
-          <div className="hero-glow" />
-        </div>
         <div className="container">
-          <div className="eyebrow"><i />{about.title}</div>
+          <div className="eyebrow"><span className="eyebrow-tag">/about</span>{about.title}</div>
           <h1>
-            Building <span className="gradient-text">the Future.</span>
+            Building <span className="accent">the Future.</span>
+            <span className="cursor" aria-hidden="true">_</span>
           </h1>
           <p className="page-lede">{about.lede}</p>
           <nav className="page-toc" aria-label="On this page">
@@ -32,7 +29,7 @@ export default function About() {
       <section id="who-we-are">
         <div className="container split">
           <div className="section-label sticky-label">
-            <span className="section-index">01</span>
+            <span className="section-index">[01]</span>
             <span>Who we are</span>
           </div>
           <div className="prose">
@@ -45,12 +42,12 @@ export default function About() {
       <section id="vision-mission">
         <div className="container">
           <div className="vm-grid vm-grid-large">
-            <div className="vm-card">
-              <span className="mono-label">02 · Our vision</span>
+            <div className="vm-card brackets">
+              <span className="mono-label">[02] Our vision</span>
               <p>{about.vision}</p>
             </div>
-            <div className="vm-card">
-              <span className="mono-label">03 · Our mission</span>
+            <div className="vm-card brackets">
+              <span className="mono-label">[03] Our mission</span>
               <p>{about.mission}</p>
             </div>
           </div>
@@ -63,7 +60,7 @@ export default function About() {
           <ol className="area-list">
             {about.areas.map((a, i) => (
               <li className="area-row" key={a.title}>
-                <span className="division-n">{String(i + 1).padStart(2, "0")}</span>
+                <span className="division-n">A-{String(i + 1).padStart(2, "0")}</span>
                 <div className="area-head">
                   <h3>{a.title}</h3>
                   <div className="chips">
@@ -85,7 +82,7 @@ export default function About() {
           <div className="principles">
             {about.approach.principles.map((p, i) => (
               <div className="principle" key={p.title}>
-                <span className="mono-label">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mono-label">0{i + 1}</span>
                 <h3>{p.title}</h3>
                 <p>{p.text}</p>
               </div>
@@ -111,7 +108,7 @@ export default function About() {
       <section id="story">
         <div className="container split">
           <div className="section-label sticky-label">
-            <span className="section-index">07</span>
+            <span className="section-index">[07]</span>
             <span>Our story</span>
           </div>
           <div className="prose">
@@ -132,7 +129,7 @@ export default function About() {
 
       <section className="about-card-wrap" aria-label="Company details">
         <div className="container">
-          <dl className="about-card">
+          <dl className="about-card brackets">
             <div><dt>Company</dt><dd>{company.fullName}</dd></div>
             <div><dt>Tagline</dt><dd>{company.tagline}</dd></div>
             <div><dt>Website</dt><dd><a href={company.website}>{company.websiteLabel}</a></dd></div>

@@ -445,7 +445,7 @@ function Placeholder({ item }) {
 
 export default function SchoolOSDashboard() {
   const [page, setPage] = useState("overview");
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [closed, setClosed] = useState({});
   const item = ALL_ITEMS.find((i) => i.id === page) ?? ALL_ITEMS[0];
   const meta = PAGE_META[page] ?? { title: item.label, sub: "Northgate Academy · Main campus" };

@@ -12,12 +12,12 @@ export default function AboutTeaser() {
         </SectionHead>
 
         <div className="vm-grid">
-          <div className="vm-card">
-            <span className="mono-label">Our vision</span>
+          <div className="vm-card brackets">
+            <span className="mono-label">// Our vision</span>
             <p>{about.vision}</p>
           </div>
-          <div className="vm-card">
-            <span className="mono-label">Our mission</span>
+          <div className="vm-card brackets">
+            <span className="mono-label">// Our mission</span>
             <p>{about.mission}</p>
           </div>
         </div>

@@ -6,9 +6,9 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="footer-top">
-          <div className="footer-word">
-            {company.name}
-            <span>{company.tagline}</span>
+          <div className="footer-tag">
+            <span className="mono-label">{company.fullName}</span>
+            <p>{company.tagline}</p>
           </div>
           <div className="footer-cols">
             <div>
@@ -23,8 +23,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="footer-word" aria-hidden="true">Neon Industries</div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} {company.fullName}. All rights reserved.</span>
+          <span className="footer-status"><i /> All systems operational</span>
           <a href="#top">Back to top ↑</a>
         </div>
       </div>
