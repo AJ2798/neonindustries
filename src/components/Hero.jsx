@@ -21,13 +21,13 @@ function EventFeed() {
     return () => clearInterval(t);
   }, []);
 
-  const visible = Array.from({ length: 5 }, (_, i) => EVENTS[(offset + i) % EVENTS.length]);
+  const visible = Array.from({ length: 4 }, (_, i) => EVENTS[(offset + i) % EVENTS.length]);
 
   return (
     <div className="feed" aria-label="Example platform activity">
       <div className="feed-head">
         <span className="feed-live"><i /> Live across the stack</span>
-        <span className="feed-sub">Sample data</span>
+        <span>Sample data</span>
       </div>
       <ul>
         {visible.map((e, i) => (
@@ -46,41 +46,41 @@ function EventFeed() {
 }
 
 export default function Hero() {
-  const { hero, heroProof } = siteConfig;
+  const { hero, sectors } = siteConfig;
 
   return (
     <section className="hero" id="top">
       <div className="hero-backdrop" aria-hidden="true">
-        <div className="hero-glow hero-glow-one" />
-        <div className="hero-glow hero-glow-two" />
-      </div>
-
-      <div className="container hero-inner">
-        <div className="hero-copy-wrap">
-          <div className="eyebrow"><i />{hero.eyebrow}</div>
-          <h1>
-            {hero.titleLine1}
-            <br />
-            <span className="gradient-text">{hero.titleLine2}</span>
-          </h1>
-          <p className="hero-copy">{hero.copy}</p>
-          <div className="hero-actions">
-            <a className="btn btn-primary" href={hero.primaryButton.href}>{hero.primaryButton.label} <span>→</span></a>
-            <a className="btn btn-secondary" href={hero.secondaryButton.href}>{hero.secondaryButton.label}</a>
-          </div>
-        </div>
-        <EventFeed />
+        <div className="hero-orbit" />
+        <div className="hero-glow" />
       </div>
 
       <div className="container">
-        <dl className="proof">
-          {heroProof.map((p) => (
-            <div key={p.label}>
-              <dt>{p.value}</dt>
-              <dd>{p.label}</dd>
+        <div className="eyebrow"><i />{hero.eyebrow}</div>
+        <h1>
+          {hero.titleLine1}
+          <br />
+          <span className="gradient-text">{hero.titleLine2}</span>
+        </h1>
+
+        <div className="hero-bottom">
+          <div>
+            <p className="hero-copy">{hero.copy}</p>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href={hero.primaryButton.href}>{hero.primaryButton.label} <span>→</span></a>
+              <a className="btn btn-secondary" href={hero.secondaryButton.href}>{hero.secondaryButton.label}</a>
             </div>
+          </div>
+          <EventFeed />
+        </div>
+      </div>
+
+      <div className="marquee" aria-label="Sectors we work in">
+        <div className="marquee-track">
+          {[...sectors, ...sectors].map((s, i) => (
+            <span key={i} aria-hidden={i >= sectors.length}>{s}</span>
           ))}
-        </dl>
+        </div>
       </div>
     </section>
   );

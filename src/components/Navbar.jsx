@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import siteConfig from "../data/siteConfig";
 
-export default function Navbar() {
+export default function Navbar({ path }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,12 +15,19 @@ export default function Navbar() {
   return (
     <div className="nav-wrap">
       <nav className={scrolled || open ? "scrolled" : ""}>
-        <a href="#top" className="brand" aria-label="Neon Industries home" onClick={() => setOpen(false)}>
-          <span>{siteConfig.company.name}</span>
+        <a href="/" className="brand" aria-label="Neon Industries home" onClick={() => setOpen(false)}>
+          {siteConfig.company.name}
         </a>
         <div className={`nav-links ${open ? "open" : ""}`}>
           {siteConfig.navigation.map((item) => (
-            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+            <a
+              key={item.href}
+              href={item.href}
+              aria-current={item.href === path ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </a>
           ))}
         </div>
         <button className="menu-btn" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>

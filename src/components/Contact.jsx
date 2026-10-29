@@ -1,17 +1,22 @@
 import siteConfig from "../data/siteConfig";
 
-export default function Contact() {
+// Closing call to action. Shared by both pages; the About page passes its
+// own copy and address.
+export default function Contact({ title, copy, email }) {
   const { contact } = siteConfig;
+  const to = email ?? contact.email;
+
   return (
     <section id="contact">
       <div className="container">
         <div className="cta-panel">
-          <div>
-            <div className="kicker">{contact.kicker}</div>
-            <h2>{contact.title}</h2>
-            <p>{contact.copy}</p>
-          </div>
-          <a className="btn btn-primary" href={`mailto:${contact.email}?subject=Connecting%20with%20Neon%20Industries`}>{contact.buttonLabel} <span>→</span></a>
+          <div className="cta-orbit" aria-hidden="true" />
+          <span className="mono-label">{contact.kicker}</span>
+          <h2>{title ?? contact.title}</h2>
+          <p>{copy ?? contact.copy}</p>
+          <a className="btn btn-primary" href={`mailto:${to}?subject=Connecting%20with%20Neon%20Industries`}>
+            {contact.buttonLabel} <span>→</span>
+          </a>
         </div>
       </div>
     </section>

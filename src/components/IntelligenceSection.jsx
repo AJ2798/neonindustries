@@ -1,5 +1,6 @@
 import siteConfig from "../data/siteConfig";
 import DemoWindow from "./DemoWindow";
+import SectionHead from "./SectionHead";
 import NeonWorkspace from "./demos/NeonWorkspace";
 
 export default function IntelligenceSection() {
@@ -8,13 +9,7 @@ export default function IntelligenceSection() {
   return (
     <section id="intelligence" className="product-section">
       <div className="container">
-        <div className="product-intro">
-          <div>
-            <div className="kicker">{intelligence.kicker}</div>
-            <h2>{intelligence.title}</h2>
-          </div>
-          <p>{intelligence.copy}</p>
-        </div>
+        <SectionHead index="01.B" kicker={intelligence.kicker} title={intelligence.title} intro={intelligence.copy} />
 
         <ol className="points">
           {intelligence.points.map((p, i) => (

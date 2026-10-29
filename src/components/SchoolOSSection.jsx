@@ -1,5 +1,6 @@
 import siteConfig from "../data/siteConfig";
 import DemoWindow from "./DemoWindow";
+import SectionHead from "./SectionHead";
 import SchoolOSDashboard from "./demos/SchoolOSDashboard";
 
 export default function SchoolOSSection() {
@@ -8,13 +9,7 @@ export default function SchoolOSSection() {
   return (
     <section id="schoolos" className="product-section">
       <div className="container">
-        <div className="product-intro">
-          <div>
-            <div className="kicker kicker-violet">{schoolos.kicker}</div>
-            <h2>{schoolos.title}</h2>
-          </div>
-          <p>{schoolos.copy}</p>
-        </div>
+        <SectionHead index="01.A" kicker={schoolos.kicker} title={schoolos.title} intro={schoolos.copy} />
 
         <DemoWindow address="demo.neonindustriesltd.com/schoolos" label="SchoolOS dashboard demo">
           <SchoolOSDashboard />

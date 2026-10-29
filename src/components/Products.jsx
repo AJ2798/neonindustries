@@ -1,21 +1,25 @@
 import siteConfig from "../data/siteConfig";
+import SectionHead from "./SectionHead";
 
 // Overview of the two flagship platforms.
 export default function Products() {
   const { productsSection, products } = siteConfig;
 
   return (
-    <section id="products">
+    <section id="projects">
       <div className="container">
-        <h2 className="projects-title">{productsSection.title}</h2>
+        <SectionHead {...productsSection} />
 
         <div className="stack">
-          {products.map((p) => (
+          {products.map((p, i) => (
             <a className={`stack-card stack-${p.id}`} href={p.href} key={p.id}>
-              <span className="tag">{p.tag}</span>
+              <div className="stack-top">
+                <span className="tag">{p.tag}</span>
+                <span className="stack-n">0{i + 1}</span>
+              </div>
               <h3>{p.name}</h3>
               <p>{p.summary}</p>
-              <span className="stack-link">See it working →</span>
+              <span className="stack-link">See it working <span>↓</span></span>
             </a>
           ))}
         </div>

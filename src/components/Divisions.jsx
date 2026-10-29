@@ -1,32 +1,28 @@
 import siteConfig from "../data/siteConfig";
+import SectionHead from "./SectionHead";
 
+// Editorial index of divisions: one row per division.
 export default function Divisions() {
   const { divisionsSection, divisions } = siteConfig;
 
   return (
     <section id="divisions">
       <div className="container">
-        <div className="section-head">
-          <div>
-            <div className="kicker">{divisionsSection.kicker}</div>
-            <h2>{divisionsSection.title}</h2>
-          </div>
-          <p>{divisionsSection.intro}</p>
-        </div>
+        <SectionHead {...divisionsSection} />
 
-        <div className="division-grid">
+        <ol className="division-list">
           {divisions.map((item, i) => (
-            <article className="division-card" key={item.name}>
-              <div className="division-top">
-                <span className="division-n">{String(i + 1).padStart(2, "0")}</span>
-                <span className="division-status" data-status={item.status}>{item.status}</span>
+            <li className="division-row" key={item.name}>
+              <span className="division-n">{String(i + 1).padStart(2, "0")}</span>
+              <div className="division-name">
+                <h3>{item.name}</h3>
+                <span className="tag">{item.tag}</span>
               </div>
-              <span className="tag">{item.tag}</span>
-              <h3>{item.name}</h3>
               <p>{item.description}</p>
-            </article>
+              <span className="division-status" data-status={item.status}>{item.status}</span>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
