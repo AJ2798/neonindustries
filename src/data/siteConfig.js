@@ -8,7 +8,7 @@ const siteConfig = {
   },
 
   navigation: [
-    { label: "Products", href: "#products" },
+    { label: "Projects", href: "#products" },
     { label: "Divisions", href: "#divisions" },
     { label: "Contact", href: "#contact" },
   ],
@@ -17,7 +17,7 @@ const siteConfig = {
     eyebrow: "Neon Industries Limited",
     titleLine1: "Software that runs",
     titleLine2: "real institutions.",
-    copy: "We build operating systems for schools and businesses, and an AI workspace that can act on them safely. Then we take the same engineering into energy, security, logistics and agriculture.",
+    copy: "We build SchoolOS, the operating system for schools, and Neon Intelligence, an AI platform for any team. Then we take the same engineering into energy, security, logistics and agriculture.",
     primaryButton: { label: "See SchoolOS live", href: "#schoolos" },
     secondaryButton: { label: "Try Neon Intelligence", href: "#intelligence" },
   },
@@ -29,9 +29,7 @@ const siteConfig = {
   ],
 
   productsSection: {
-    kicker: "Flagship platforms",
-    title: "Two products. One connected stack.",
-    intro: "SchoolOS is the system of record. Neon Intelligence is the assistant that reads it, prepares the work and waits for your approval before anything changes.",
+    title: "Featured projects",
   },
 
   products: [
@@ -45,8 +43,8 @@ const siteConfig = {
     {
       id: "intelligence",
       name: "Neon Intelligence",
-      tag: "AI workspace",
-      summary: "Ask in plain language. It queries your connected systems, drafts the change, and shows exactly what will be written.",
+      tag: "AI platform",
+      summary: "A general-purpose AI platform. Ask anything, work with documents and data, and connect it to the tools you already use.",
       href: "#intelligence",
     },
   ],
@@ -67,12 +65,12 @@ const siteConfig = {
 
   intelligence: {
     kicker: "Neon Intelligence",
-    title: "An assistant that asks before it acts.",
-    copy: "Neon Intelligence connects to SchoolOS and NI Business. It answers with live figures, prepares payments, payroll and reminders as reviewable proposals, and only commits after a fresh approval code.",
+    title: "An AI platform that asks before it acts.",
+    copy: "Neon Intelligence is a general-purpose AI platform for any organisation. Ask questions, analyse documents and spreadsheets, draft content, and connect it to the systems you already run. When it needs to change something, it shows you exactly what and waits for your approval.",
     points: [
-      { title: "Grounded answers", text: "Figures come from the connected system, with the query shown." },
-      { title: "Proposals, not surprises", text: "Every change is a snapshot with a before-and-after diff." },
-      { title: "Approval-gated", text: "Nothing is posted, sent or submitted until a person approves it." },
+      { title: "Connects to anything", text: "Plug in your own systems and APIs. Answers come from your data, with the source shown." },
+      { title: "Documents and data", text: "Import files, query tables and draft reports, letters and messages in one workspace." },
+      { title: "Approval-gated", text: "Every change is a reviewable proposal. Nothing is posted, sent or submitted until a person approves it." },
     ],
   },
 
@@ -87,7 +85,7 @@ const siteConfig = {
       tag: "AI / Software",
       name: "Neon Intelligence",
       status: "Building",
-      description: "AI, software platforms, automation and the assistant layer that connects every Neon product.",
+      description: "AI platforms, automation and intelligent software for organisations in any industry.",
     },
     {
       tag: "Education",

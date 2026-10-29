@@ -6,7 +6,6 @@ export default function Footer() {
     <footer>
       <div className="container footer-grid">
         <div className="footer-brand">
-          <span className="brand-mark">NI</span>
           <div>
             <strong>{company.fullName}</strong>
             <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>

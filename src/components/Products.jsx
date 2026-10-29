@@ -7,13 +7,7 @@ export default function Products() {
   return (
     <section id="products">
       <div className="container">
-        <div className="section-head">
-          <div>
-            <div className="kicker">{productsSection.kicker}</div>
-            <h2>{productsSection.title}</h2>
-          </div>
-          <p>{productsSection.intro}</p>
-        </div>
+        <h2 className="projects-title">{productsSection.title}</h2>
 
         <div className="stack">
           {products.map((p) => (

@@ -138,18 +138,6 @@ h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
   -webkit-backdrop-filter: blur(18px);
 }
 .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-family: var(--display); letter-spacing: -0.02em; }
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #05070b;
-  background: linear-gradient(135deg, rgba(87, 217, 255, 0.95), rgba(141, 108, 255, 0.95));
-  flex-shrink: 0;
-}
 .nav-links { display: flex; gap: 4px; margin-left: auto; }
 .nav-links a { padding: 8px 14px; border-radius: 999px; font-size: 0.92rem; color: var(--muted); transition: color 0.2s, background 0.2s; }
 .nav-links a:hover { color: var(--text); background: var(--panel); }
@@ -236,6 +224,7 @@ h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
 /* ── Products overview ─────────────────────────── */
 
 #products { padding-top: 80px; }
+.projects-title { margin-bottom: 36px; }
 .stack { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .stack-card {
   position: relative;
@@ -385,12 +374,13 @@ h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
 }
 .cta-panel h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 14px; }
 .cta-panel p { color: var(--muted); max-width: 560px; }
+.cta-panel .btn { justify-self: start; }
 
 footer { padding: 40px 0 48px; border-top: 1px solid var(--line); }
 .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .footer-brand { display: flex; align-items: center; gap: 14px; }
 .footer-brand strong { display: block; font-size: 0.95rem; }
-.footer-brand span:not(.brand-mark) { display: block; font-size: 0.85rem; color: var(--faint); }
+.footer-brand span { display: block; font-size: 0.85rem; color: var(--faint); }
 .footer-links { display: flex; gap: 22px; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); }
 .footer-links a:hover { color: var(--text); }
 .footer-email { display: block; margin-top: 2px; color: var(--muted); font-size: 0.85rem; }

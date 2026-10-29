@@ -29,7 +29,7 @@ export default function IntelligenceSection() {
         <DemoWindow address="demo.neonindustriesltd.com/intelligence" label="Neon Intelligence workspace demo">
           <NeonWorkspace />
         </DemoWindow>
-        <p className="demo-caption">Pick a suggestion, or try “Record a K2,500 payment against INV-1024” and approve it. Scripted with sample data.</p>
+        <p className="demo-caption">Shown here connected to SchoolOS. Pick a suggestion, or try “Record a K2,500 payment against INV-1024” and approve it. Scripted with sample data.</p>
       </div>
     </section>
   );
