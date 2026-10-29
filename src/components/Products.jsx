@@ -1,6 +1,6 @@
 import siteConfig from "../data/siteConfig";
 
-// Overview of the two flagship platforms and how they connect.
+// Overview of the two flagship platforms.
 export default function Products() {
   const { productsSection, products } = siteConfig;
 
@@ -24,14 +24,6 @@ export default function Products() {
               <span className="stack-link">See it working →</span>
             </a>
           ))}
-
-          <div className="stack-bridge" aria-hidden="true">
-            <span>Delegated access</span>
-            <svg viewBox="0 0 120 24" preserveAspectRatio="none">
-              <path d="M0 12 H120" />
-            </svg>
-            <span>Approval-gated writes</span>
-          </div>
         </div>
       </div>
     </section>

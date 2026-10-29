@@ -249,7 +249,7 @@ h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
 /* ── Products overview ─────────────────────────── */
 
 #products { padding-top: 80px; }
-.stack { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stack { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .stack-card {
   position: relative;
   display: flex;
@@ -283,27 +283,6 @@ h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
 .stack-card p { color: var(--muted); max-width: 440px; position: relative; z-index: 1; }
 .stack-link { font-weight: 600; font-size: 0.92rem; position: relative; z-index: 1; }
 
-.stack-bridge {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 10px 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: 14px;
-  background: #0b0f17;
-  font-size: 0.72rem;
-  color: var(--muted);
-  white-space: nowrap;
-  z-index: 2;
-}
-.stack-bridge svg { width: 90px; height: 10px; }
-.stack-bridge path { stroke: var(--cyan); stroke-width: 2; stroke-dasharray: 5 5; fill: none; animation: dash 1.2s linear infinite; }
-@keyframes dash { to { stroke-dashoffset: -20; } }
 
 /* ── Product sections ─────────────────────────── */
 
@@ -459,7 +438,6 @@ footer { padding: 40px 0 48px; border-top: 1px solid var(--line); }
   .nav-cta { display: none; }
   .section-head, .product-intro { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .stack { grid-template-columns: minmax(0, 1fr); }
-  .stack-bridge { display: none; }
   .feature-grid, .points { grid-template-columns: minmax(0, 1fr); }
   .cta-panel { grid-template-columns: minmax(0, 1fr); padding: 36px; }
   main > section, main > .product-section { padding: 84px 0; }
